@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace TestForPowerLine
 {
-    internal class SportsCar
+    internal class SportsCar : Car
     {
-        
+        public SportsCar(TypeCar typeCar, double AFC, double FTC, double speed) : base(typeCar, AFC, FTC, speed)
+        {
+
+        }
+
+        public override double GetPathDistanceWithLoad()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

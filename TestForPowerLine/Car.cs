@@ -6,24 +6,27 @@ using System.Threading.Tasks;
 
 namespace TestForPowerLine
 {
+    /// <summary>
+    /// Базовая сущность автомобиля
+    /// </summary>
     public abstract class Car
     {
         /// <summary>
         /// Тип автомобиля
         /// </summary>
-        public TypeCar typeCar;
+        public TypeCar typeCar { get; private set; }
         /// <summary>
         /// Average Fuel Consumption - средний расход топлива
         /// </summary>
-        public double AFC;
+        public double AFC { get; private set; }
         /// <summary>
         /// Fuel Tank Capacity - текущий объем топливного бака
         /// </summary>
-        public double FTC;
+        public double FTC { get; private set; }
         /// <summary>
         /// Текущая скорость автомобиля
         /// </summary>
-        public double speed;
+        public double speed { get; private set; }
 
         /// <summary>
         /// Конструктор

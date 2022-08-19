@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TestForPowerLine
 {
+    /// <summary>
+    /// Грузовой автомобиль
+    /// </summary>
     internal class Truck:Car
     {
         /// <summary>
@@ -23,7 +26,6 @@ namespace TestForPowerLine
         /// <exception cref="Exception"></exception>
         public Truck(double AFC, double FTC, double speed, double Payload) : base(TypeCar.Truck, AFC, FTC, speed)
         {
-            //если вес груза больше 100% / 4% * 200 кг
             if (Payload > 100 / 4 * 200)
             {
                 throw new Exception("Превышена допустимая нагрузка");

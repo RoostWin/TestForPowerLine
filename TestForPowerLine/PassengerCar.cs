@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace TestForPowerLine
 {
+    /// <summary>
+    /// Пассажирский автомобиль
+    /// </summary>
     internal class PassengerCar:Car
     {
+        /// <summary>
+        /// Кол-во пассажиров
+        /// </summary>
         private byte passengers;
 
         /// <summary>
@@ -20,7 +26,6 @@ namespace TestForPowerLine
         /// <exception cref="Exception"></exception>
         public PassengerCar(double AFC, double FTC, double speed, byte passengers) : base(TypeCar.PassengerCar, AFC, FTC, speed)
         {
-            //если число пассажиров больше 100% / 6%
             if (passengers > 100 / 6)
             {
                 throw new Exception("Превышена допустимая нагрузка");
